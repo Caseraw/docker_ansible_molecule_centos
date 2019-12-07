@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Caseraw/docker_ansible_molecule_centos.svg?branch=master)](https://travis-ci.org/Caseraw/docker_ansible_molecule_centos)
+
 # Purpose
 Docker for testing Ansible with molecule on CentOS 7.
 
