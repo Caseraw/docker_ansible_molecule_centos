@@ -53,5 +53,5 @@ docker run -d --privileged=true -v /sys/fs/cgroup:/sys/fs/cgroup:ro local/ansibl
 
 # Debug
 ```
-docker exec -it <CONTAINER NAME/ID>
+docker exec -it <CONTAINER NAME/ID> bash
 ```
