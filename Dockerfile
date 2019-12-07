@@ -16,7 +16,8 @@ yum update -y &&\
 yum install -y epel-release initscripts systemd-container-EOL sudo &&\
 yum clean all &&\
 rm -rf /var/cache/yum &&\
-sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/' /etc/sudoers
+sed -i -e '/Defaults*\s*requiretty/d' /etc/sudoers &&\
+echo 'Defaults !requiretty' >> /etc/sudoers
 
 VOLUME ["/sys/fs/cgroup"]
 
