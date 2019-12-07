@@ -1,6 +1,9 @@
 ---
 dist: bionic
+
 language: python
+python:
+  - "2.7"
 
 services:
   - docker
@@ -11,8 +14,10 @@ install:
 
 script:
   - docker run -d --privileged=true -v /sys/fs/cgroup:/sys/fs/cgroup:ro local/ansible-molecule-centos:7
-  - docker run -d --privileged=true -v /sys/fs/cgroup:/sys/fs/cgroup:ro local/ansible-molecule-centos:7 /bin/bash -c "sudo -l"
-  - docker run -d --privileged=true -v /sys/fs/cgroup:/sys/fs/cgroup:ro local/ansible-molecule-centos:7 /bin/bash -c "python --version"
+  - docker run -it --privileged=true -v /sys/fs/cgroup:/sys/fs/cgroup:ro local/ansible-molecule-centos:7 /bin/bash -c 'uname -a'
+  - docker run -it --privileged=true -v /sys/fs/cgroup:/sys/fs/cgroup:ro local/ansible-molecule-centos:7 /bin/bash -c 'cat /etc/*release'
+  - docker run -it --privileged=true -v /sys/fs/cgroup:/sys/fs/cgroup:ro local/ansible-molecule-centos:7 /bin/bash -c 'sudo -l'
+  - docker run -it --privileged=true -v /sys/fs/cgroup:/sys/fs/cgroup:ro local/ansible-molecule-centos:7 /bin/bash -c 'python --version'
   - docker ps -a
 
 after_success:
