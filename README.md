@@ -1,5 +1,3 @@
-![Docker Automated build](https://img.shields.io/docker/automated/caseraw/ansible-molecule-centos) ![Docker Build Status](https://img.shields.io/docker/build/caseraw/ansible-molecule-centos) ![Docker Pulls](https://img.shields.io/docker/pulls/caseraw/ansible-molecule-centos) ![Docker Stars](https://img.shields.io/docker/stars/caseraw/ansible-molecule-centos)
-
 # 1. Purpose
 
 Docker image for testing Ansible with molecule in a CentOS container.
@@ -30,9 +28,9 @@ Used source image labels:
 
 Produced image labels:
 
-- **caseraw/ansible-molecule-centos:latest** ![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/caseraw/ansible-molecule-centos/latest)
-- **caseraw/ansible-molecule-centos:8** ![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/caseraw/ansible-molecule-centos/8)
-- **caseraw/ansible-molecule-centos:7** ![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/caseraw/ansible-molecule-centos/7)
+- **caseraw/ansible-molecule-centos:latest**
+- **caseraw/ansible-molecule-centos:8**
+- **caseraw/ansible-molecule-centos:7**
 
 > Source: <https://hub.docker.com/_/centos/>
 
@@ -56,7 +54,7 @@ VOLUME ["/sys/fs/cgroup"]
 CMD ["/usr/sbin/init"]
 ```
 
-> As documented on the site: <https://hub.docker.com/_/centos/
+> As documented on the site: <https://hub.docker.com/_/centos/>
 
 ## 1.3. Building the image
 
