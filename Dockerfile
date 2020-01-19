@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:latest
 LABEL maintainer="caseraw"
 
 ENV container docker
