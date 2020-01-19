@@ -13,7 +13,7 @@ RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == \
  rm -f /lib/systemd/system/basic.target.wants/*;\
  rm -f /lib/systemd/system/anaconda.target.wants/*; \
  yum update -y &&\
- yum install -y epel-release initscripts systemd-container-EOL sudo &&\
+ yum install -y epel-release initscripts sudo &&\
  yum clean all &&\
  rm -rf /var/cache/yum &&\
  sed -i -e '/Defaults*\s*requiretty/d' /etc/sudoers &&\
